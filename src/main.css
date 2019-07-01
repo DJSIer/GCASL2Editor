@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    overflow: hidden;
+  }
+  
+  
+  #input_txt {
+    width: 30px;
+    height: 100%;
+  }
+  
+  #footer_fixed {
+    position: fixed;
+    height: 20px;
+    width: 100%;
+    bottom: 0px;
+    background-color: #337ab7;
+    color: #eeeeee;
+  }
+
+#flex{
+    display: flex;
+    flex-flow: row nowrap;
+  
+    width: 100%;
+    height: 100%;
+    background-color: #080808;
+    padding: 0px 0px 20px 0px;
+  }
+  
+  #flex div{ 
+    flex: 1 1 auto;
+    color: white;
+  }
