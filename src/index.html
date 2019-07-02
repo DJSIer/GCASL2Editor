@@ -9,17 +9,37 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
   <link href="main.css" rel="stylesheet"/>
-
+  <link rel="stylesheet" href="../node_modules/split-pane/split-pane.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/ace.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/mode-javascript.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/theme-twilight.js"></script>
   <script src="editor.js"></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="../node_modules/split-pane/split-pane.js"></script>
+  <script>
+			$(function() {
+        $('div.split-pane').splitPane();
+				$('.split-pane-divider').on('click', function () {
+					alert(1);
+				})
+			});
+		</script>
 </head>
 <body>
-    <div id="flex">
-        <div id="input_txt"></div>
-        <div >ra-men</div>
+
+		<div id="split-pane-1" class="split-pane fixed-left">
+      <div class="split-pane-component" id="left-component">
+        <div id="input_area">
+          <div id="input_txt"></div>
+        </div>
+      </div>
+      <div class="split-pane-divider" id="divider"></div>
+      <div class="split-pane-component" id="right-component">
+          <button onclick="$('div.split-pane').splitPane('firstComponentSize', 200);">Collapse first component</button>   
+      </div>
     </div>
+
+    <!--footer-->
     <div id="footer_fixed"></div>
 </body>
 </html>
