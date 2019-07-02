@@ -50,12 +50,4 @@ function onLoad() {
       readFile(file.path);
     });
   
-    // 「読み込む」ボタンの制御
-    document.querySelector('#btnLoad').addEventListener('click', () => {
-      openLoadFile();
-    });
-    // 「保存する」ボタンの制御
-    document.querySelector('#btnSave').addEventListener('click', () => {
-      openLoadFile();
-    });
   };
